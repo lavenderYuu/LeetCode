@@ -36,7 +36,7 @@ public class validPalindrome {
         s = s.toLowerCase().replaceAll("[^a-z0-9]", "");
         int front = 0;
         int back = s.length() - 1;
-
+        
         if (s.length() < 1) {
             return true;
         }
