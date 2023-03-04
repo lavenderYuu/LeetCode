@@ -46,6 +46,7 @@ public class GroupAnagrams {
             for(char cha: strs[i].toCharArray()){
                 b[cha - 'a']++;
             }
+
             for(int track = 0; track<26; track++){
                 c=c +"#" + b[track] ;
             }
