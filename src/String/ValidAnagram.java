@@ -27,10 +27,15 @@ Output: false
  */
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ValidAnagram {
     public boolean isAnagram(String s, String t) {
         int[] charS = new int[26];
         int[] charT = new int[26];
+
+
 
         if(s.length()!=t.length())
             return false;
@@ -49,6 +54,22 @@ public class ValidAnagram {
     }
 
     public static void main(String args[]){
-//        System.out.println(isAnagram("anagram","nagaram"));
+        String s = "Hello World! Nice.";
+        String[] s1;
+        List<String> s2 =  new ArrayList<>();
+        int start = 0;
+
+        for(int i = 0; i<s.length();i++) {
+            if(s.charAt(i) == ' ') {
+                s2.add(s.substring(start,i+1));
+                start=i+1;
+            }
+        }
+
+        s2.add(s.substring(start));
+
+        for(int i=0; i<s2.size();i++) {
+            System.out.println(s2.get(i));
+        }
     }
 }
